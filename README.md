@@ -8,7 +8,7 @@ Read.File("[FilePass]","[Character code]")
 ### Read.FileLine()
 Read.FileLine("[FilePass]","[Character code]")<br>
 how to use:
-```Csharp
+```csharp
 // Output to console line by line
 foreach (var line in Read.FileLine("file.txt", "UTF-8"))
 {

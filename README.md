@@ -28,7 +28,8 @@ string lastLine = linesList[linesList.Count - 1];
 ```
 
 ### Read.FileLineAsync()
-Read.FileLineAsync("[FilePass]","[Character code]")
+Read.FileLineAsync("[FilePass]","[Character code]")<br>
+ConfigureAwait(false) should be used to avoid blocking the UI thread
 <br>
 how to use:
 ```csharp

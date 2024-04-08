@@ -4,7 +4,7 @@ using System.Text;
 using System.Drawing;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-namespace Load;
+namespace Load{
 
 public class Read
 {
@@ -22,7 +22,16 @@ public class Read
         yield return sr.ReadLine();
     }
         
+    }
+  public static async IAsyncEnumerable<string> FileLineAsync(string filePath, string encoding)
+  {
+      using var sr = new StreamReader(filePath, Encoding.GetEncoding(encoding));
+      string line;
+      while ((line = await sr.ReadLineAsync().ConfigureAwait(false)) != null)
+      {
+          yield return line;
+      }
   }
-}  
 
-
+}
+  }
